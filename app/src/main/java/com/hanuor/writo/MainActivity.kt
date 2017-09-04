@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             override fun onSuccess(result: LoginResult?) {
                 //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                 Toast.makeText(applicationContext, "Logged in as ", Toast.LENGTH_SHORT).show()
+                
+                ServiceManager.userService.createUser()
             }
 
             override fun onCancel() {
